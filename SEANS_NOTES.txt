@@ -1,0 +1,9 @@
+For others on the team:
+
+I'm aware this doesn't match the specified functionality. The purpose
+of what I've done so far is to establish the *systems* that will allow
+later changes to be made simply.
+
+Dynamic object addition, scroll views, clean code, and a graphical
+representation of the future drone are implemented and ready for easy
+modifications.
