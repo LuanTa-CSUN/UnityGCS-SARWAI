@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FAB83A1E-7FB0-D476-CC6F-A0C42D500258}</ProjectGuid>
+    <ProjectGuid>{B133C758-5555-07F1-BF0D-217FF0DD7C1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -117,12 +117,12 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="CoherentNoise">
- <HintPath>D:/Users/buca1/OneDrive/Unity/SERL_GUI/Assets/WorldBuilder/Scripts/Helpers/CoherentNoise.dll</HintPath>
+ <HintPath>D:/Users/buca1/Documents/GitHub/UnityGCS/Assets/WorldBuilder/Scripts/Helpers/CoherentNoise.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{B6126232-1AE1-E299-16BC-38990114EE0D}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{CF934A4B-41DF-D401-7827-EC2E5F119A7D}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B6126232-1AE1-E299-16BC-38990114EE0D}</ProjectGuid>
+    <ProjectGuid>{CF934A4B-41DF-D401-7827-EC2E5F119A7D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -82,7 +82,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="CoherentNoise">
- <HintPath>D:/Users/buca1/OneDrive/Unity/SERL_GUI/Assets/WorldBuilder/Scripts/Helpers/CoherentNoise.dll</HintPath>
+ <HintPath>D:/Users/buca1/Documents/GitHub/UnityGCS/Assets/WorldBuilder/Scripts/Helpers/CoherentNoise.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

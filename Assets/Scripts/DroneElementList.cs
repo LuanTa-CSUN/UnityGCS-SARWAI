@@ -14,6 +14,7 @@ public class DroneElementList : MonoBehaviour {
     }
 
     public void addElement() {
-        prefabList.Add(Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity, transform));
+        if (prefabList.Count < 10)
+            prefabList.Add(Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity, transform));
     }
 }
