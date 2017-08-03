@@ -5,19 +5,17 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
 	public GameObject drone;
-
-	private Vector3 offset;
+	public float position;
 
 	void Start () {
         // Checks height of terrain at starting point
         // places cameras at height + specified offset
 
-		transform.Translate (0, drone.transform.position.y, 0);
-
-		offset = transform.position - drone.transform.position;
-	}
+		position = drone.transform.position.y;
+		transform.Translate (drone.transform.position);
+		}
 
 	void LateUpdate () {
-		transform.position = drone.transform.position + offset;
+		transform.position = drone.transform.position;
 	}
 }

@@ -12,6 +12,7 @@ public class DroneController : MonoBehaviour {
  
 
 	private Rigidbody droneBody;
+	private float terrainHeight;
 	private float droneHeight;
 	private float MoveHorizontal;
 	private float MoveVertical;
@@ -19,11 +20,16 @@ public class DroneController : MonoBehaviour {
 
 	void Start () {
 		droneBody = GetComponent<Rigidbody>();
+		Vector3 terrainSize = myTerrain.terrainData.size;
+		Vector3 location = new Vector3 (terrainSize.x / 2, transform.position.y, terrainSize.z / 2);
 
         // Checks height of terrain at starting point
-        // places cameras at height + specified offset
-		droneHeight = myTerrain.SampleHeight (transform.position);
-        transform.Translate(0, droneHeight + hoverHeightOffset, 0);
+        // places drone at height + specified offset
+
+		terrainHeight = myTerrain.SampleHeight (location);
+		droneHeight = terrainHeight - (transform.position.y % terrainHeight);
+
+		transform.Translate(terrainSize.x / 2, droneHeight + hoverHeightOffset, terrainSize.z / 2);
 	}
 
 	void Update () {
