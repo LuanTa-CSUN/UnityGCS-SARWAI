@@ -13,6 +13,7 @@ public class DroneElementList : MonoBehaviour {
         prefabList = new List<GameObject>();
     }
 
+    // Method for testing purposes only
     public void addElement() {
         if (prefabList.Count < 10)
             prefabList.Add(Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity, transform));

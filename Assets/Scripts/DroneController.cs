@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class DroneController : MonoBehaviour {
 
 	public float speed;
     public float hoverHeightOffset;
     public float hoverForce;
-    public Terrain myTerrain;
- 
+	public Terrain myTerrain;
 
 	private Rigidbody droneBody;
 	private float terrainHeight;
@@ -17,20 +17,24 @@ public class DroneController : MonoBehaviour {
 	private float MoveHorizontal;
 	private float MoveVertical;
     private Vector3 appliedForce;
+	private GameObject terrain;
 
-	void Start () {
-		droneBody = GetComponent<Rigidbody>();
-		Vector3 terrainSize = myTerrain.terrainData.size;
-		Vector3 location = new Vector3 (terrainSize.x / 2, transform.position.y, terrainSize.z / 2);
+    void Awake()
+    {
+        droneBody = GetComponent<Rigidbody>();
+
+        // Checks for center size of terrain
+        // Calculates center of terrain based on size, creates vector
+        Vector3 terrainSize = myTerrain.terrainData.size;
+        Vector3 location = new Vector3(terrainSize.x / 2, transform.position.y, terrainSize.z / 2);
 
         // Checks height of terrain at starting point
         // places drone at height + specified offset
-
-		terrainHeight = myTerrain.SampleHeight (location);
-		droneHeight = terrainHeight - (transform.position.y % terrainHeight);
-
-		transform.Translate(terrainSize.x / 2, droneHeight + hoverHeightOffset, terrainSize.z / 2);
-	}
+        terrainHeight = myTerrain.SampleHeight(location);
+        droneHeight = terrainHeight - (transform.position.y % terrainHeight);
+        Debug.Log(droneHeight);
+        transform.Translate(terrainSize.x / 2, droneHeight + hoverHeightOffset, terrainSize.z / 2);
+    }
 
 	void Update () {
 		MoveHorizontal = Input.GetAxis ("Horizontal");
@@ -59,7 +63,7 @@ public class DroneController : MonoBehaviour {
         }
 
         // Take user input and move drone accordingly
-        // Will be adapted for automation, though using AddRelativeForce results in use of application of acceleration
+        // Will be adapted for automation, though using "AddRelativeForce" results in application of acceleration
 		Vector3 movement = new Vector3 (MoveHorizontal, 0, MoveVertical);
 		droneBody.AddRelativeForce (movement * speed);
 	}
