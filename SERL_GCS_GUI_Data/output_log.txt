@@ -1,0 +1,55 @@
+Mono path[0] = 'D:/Users/buca1/Documents/GitHub/UnityGCS/SERL_GCS_GUI_Data/Managed'
+Mono config path = 'D:/Users/buca1/Documents/GitHub/UnityGCS/SERL_GCS_GUI_Data/Mono/etc'
+PlayerConnection initialized from D:/Users/buca1/Documents/GitHub/UnityGCS/SERL_GCS_GUI_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55225
+Multi-casting "[IP] 192.168.1.10 [Port] 55225 [Flags] 2 [Guid] 3197135360 [EditorId] 4224748120 [Version] 1048832 [Id] WindowsPlayer(Asus-PC) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55225]
+PlayerConnection already initialized - listening to [0.0.0.0:55225]
+Player data archive not found at `D:/Users/buca1/Documents/GitHub/UnityGCS/SERL_GCS_GUI_Data/data.unity3d`, using local filesystem
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 850M (ID=0x1391)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   22.21.13.8476
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\CoherentNoise.dll (this message is harmless)
+Loading D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\CoherentNoise.dll into Unity Child Domain
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Users\buca1\Documents\GitHub\UnityGCS\SERL_GCS_GUI_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.027 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.791440 ms
+Cannot find webcam device no camera available..
+UnityEngine.WebCamTexture:INTERNAL_CALL_Play(WebCamTexture)
+UnityEngine.WebCamTexture:Play() (at C:\buildslave\unity\build\artifacts\generated\common\modules\Audio\UnityEngineWebCamTextureBindings.gen.cs:79)
+WebCamFeed:Start() (at D:\Users\buca1\Documents\GitHub\UnityGCS\Assets\Scripts\WebCamFeed.cs:14)
+
+[C:\buildslave\unity\build\Runtime/Video/VideoTexture.h line 134] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/modules/Audio/UnityEngineWebCamTextureBindings.gen.cs Line: 79)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: a0c -> priority: 1 
+  Thread -> id: 162c -> priority: 1 
+  Thread -> id: 2f80 -> priority: 1 
+  Thread -> id: 114c -> priority: 1 
+Releasing render texture that is set as Camera.targetTexture!
+ 
+(Filename: C:\buildslave\unity\build\Runtime/Camera/Camera.cpp Line: 3741)
+

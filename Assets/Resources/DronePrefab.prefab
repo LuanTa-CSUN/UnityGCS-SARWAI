@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6446015881154bd58575efd8c23d256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  hoverHeightOffset: 5
-  hoverForce: 55
+  speed: 7
+  hoverHeightOffset: 15
+  hoverForce: 70
   myTerrain: {fileID: 218008101856869948, guid: e6083560a3fa034498e3cd97c3fbf0c0,
     type: 2}
   isFlyer: 1
