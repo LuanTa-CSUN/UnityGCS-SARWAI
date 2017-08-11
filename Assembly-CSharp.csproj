@@ -53,9 +53,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\DroneController.cs" />
-     <Compile Include="Assets\Scripts\DroneElementList.cs" />
+     <Compile Include="Assets\Scripts\ElementList.cs" />
      <Compile Include="Assets\Scripts\InstantiatePrefabs.cs" />
      <Compile Include="Assets\Scripts\InstantiateUI.cs" />
+     <Compile Include="Assets\Scripts\OnElementCreation.cs" />
+     <Compile Include="Assets\Scripts\SelectDrone.cs" />
      <Compile Include="Assets\Scripts\SingletonBase.cs" />
      <Compile Include="Assets\Scripts\TerrainPrefab.cs" />
      <Compile Include="Assets\Scripts\UIPrefab.cs" />

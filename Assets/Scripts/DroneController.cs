@@ -10,6 +10,7 @@ public class DroneController : MonoBehaviour {
     public float hoverHeightOffset;
     public float hoverForce;
 	public Terrain myTerrain;
+    public bool isFlyer;
 
 	private Rigidbody droneBody;
 	private float terrainHeight;
@@ -32,8 +33,16 @@ public class DroneController : MonoBehaviour {
         // places drone at height + specified offset
         terrainHeight = myTerrain.SampleHeight(location);
         droneHeight = terrainHeight - (transform.position.y % terrainHeight);
-        Debug.Log(droneHeight);
-        transform.Translate(terrainSize.x / 2, droneHeight + hoverHeightOffset, terrainSize.z / 2);
+
+        if (isFlyer == true) {
+            transform.Translate(terrainSize.x / 2, droneHeight + hoverHeightOffset, terrainSize.z / 2);
+            droneBody.useGravity = false;
+        }
+
+        else {
+            transform.Translate(terrainSize.x / 2, droneHeight, terrainSize.z / 2);
+            droneBody.useGravity = true;
+        }
     }
 
 	void Update () {
@@ -42,29 +51,35 @@ public class DroneController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		Ray ray = new Ray (transform.position, -transform.up);
-		RaycastHit hit;
 
-        // Checks player height above ground
-        // If below threshold, applies Force to compensate
-        if (Physics.Raycast(ray, out hit, hoverHeightOffset))
+        if (isFlyer == true)
         {
-            float proportionalheight = (hoverHeightOffset - hit.distance) / hoverHeightOffset;
-            appliedForce = Vector3.up * proportionalheight * hoverForce;
-            droneBody.AddForce(appliedForce);
-        }
+            Ray ray = new Ray(transform.position, -transform.up);
+            RaycastHit hit;
 
-        // To compensate for unnecessary bobbing, check if drone is *above* threshold
-        // If true, apply opposing Force to compensate
-        else if (ray.origin.y > hoverHeightOffset)
-        {
-            Vector3 correctForce = new Vector3(0, -hoverForce, 0);
-            droneBody.AddForce(correctForce);
+            // Checks player height above ground
+            // If below threshold, applies Force to compensate
+            if (Physics.Raycast(ray, out hit, hoverHeightOffset))
+            {
+                float proportionalHeight = (hoverHeightOffset - hit.distance) / hoverHeightOffset;
+                appliedForce = Vector3.up * proportionalHeight * hoverForce;
+                droneBody.AddForce(appliedForce);
+            }
+
+            // To compensate for unnecessary bobbing, check if drone is *above* threshold
+            // If true, apply opposing Force to compensate
+            else if (ray.origin.y > hoverHeightOffset)
+            {
+                //Vector3 correctForce = new Vector3(0, hoverForce, 0);
+                //float proportionalHeight = (hoverHeightOffset - hit.distance) / hoverHeightOffset;
+                Vector3 correctForce = -Vector3.up * (hoverForce);
+                droneBody.AddForce(correctForce);
+            }
         }
 
         // Take user input and move drone accordingly
-        // Will be adapted for automation, though using "AddRelativeForce" results in application of acceleration
-		Vector3 movement = new Vector3 (MoveHorizontal, 0, MoveVertical);
-		droneBody.AddRelativeForce (movement * speed);
+        // Will be adapted for automation, though using "AddForce" results in application of acceleration
+        Vector3 movement = new Vector3(MoveHorizontal, 0, MoveVertical);
+        droneBody.AddForce(movement * speed);
 	}
 }

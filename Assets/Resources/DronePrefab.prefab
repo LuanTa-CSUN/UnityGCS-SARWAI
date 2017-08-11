@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23000880104058348}
   - component: {fileID: 135266434083121618}
   - component: {fileID: 114078218161469248}
+  - component: {fileID: 114768817529247888}
   m_Layer: 10
   m_Name: DronePrefab
   m_TagString: Untagged
@@ -109,11 +110,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6446015881154bd58575efd8c23d256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  hoverHeightOffset: 20
-  hoverForce: 70
+  speed: 8
+  hoverHeightOffset: 5
+  hoverForce: 55
   myTerrain: {fileID: 218008101856869948, guid: e6083560a3fa034498e3cd97c3fbf0c0,
     type: 2}
+  isFlyer: 1
+--- !u!114 &114768817529247888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684865712247876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950d4f63c84d9e24d904e3fe77f17bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1684865712247876}
+  prefabList: []
+  droneList: []
 --- !u!135 &135266434083121618
 SphereCollider:
   m_ObjectHideFlags: 1

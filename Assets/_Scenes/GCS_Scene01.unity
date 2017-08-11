@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722318376}
   - component: {fileID: 722318375}
+  - component: {fileID: 722318377}
   m_Layer: 0
   m_Name: MainSpace
   m_TagString: Untagged
@@ -230,6 +231,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &722318377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722318374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950d4f63c84d9e24d904e3fe77f17bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1684865712247876, guid: 7cdb723bd096647478e7e88f2d177a63, type: 2}
+  prefabList: []
+  droneList: []
 --- !u!1 &1016895656
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +297,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967263
 --- !u!114 &1016895660
 MonoBehaviour:
   m_ObjectHideFlags: 0
