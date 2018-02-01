@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class GetImage : MonoBehaviour {
 	// Allows us to edit the url variable for editing though the inspector.
-	public string Url = "https://www.w3schools.com/css/img_fjords.jpg";
+	public string Url = "---INSERT---";
 
 	// At start of program the first image is captured.
 	void Start ()
